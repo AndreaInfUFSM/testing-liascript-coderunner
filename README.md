@@ -249,13 +249,13 @@ CodeRunner is a *"code-running server, based on Python, that can compile and exe
 CodeRunner's clients are LiaScript documents, so we have a single document and multiple ways to view it:
 
 - LiaScript server on GitHub:
-  https://liascript.github.io/course/?https://github.com/andreainfufsm/CodeRunner
+  https://liascript.github.io/course/?https://github.com/andreainfufsm/testing-liascript-coderunner
 
 - GitHub-rendered Markdown:
-  https://github.com/andreainfufsm/Testing-CodeRunner
+  https://github.com/andreainfufsm/testing-liascript-coderunner
 
 - Raw Markdown on GitHub:
-  https://github.com/andreainfufsm/Testing-CodeRunner
+  https://raw.githubusercontent.com/AndreaInfUFSM/testing-liascript-coderunner/master/README.md
 
 - Local LiaScript development server: `liascript-devserver --input README.md --port 3001 --live`
 
