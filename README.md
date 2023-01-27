@@ -305,7 +305,8 @@ About the macros:
 
 - Implementation described in: https://github.com/LiaScript/CodeRunner/blob/master/README.md#implementation
 
-- We've pasted the code into the header of our MarkDown document. Check the raw view of the document: https://raw.githubusercontent.com/AndreaInfUFSM/Testing-CodeRunner/master/README.md
+- We've pasted the code into the header of our MarkDown document. Check the raw view of the document: 
+https://raw.githubusercontent.com/AndreaInfUFSM/testing-liascript-coderunner/master/README.md
 
 
 > The `@LIA.eval` macro gives us more flexibility, but `@LIA.haskell` is shorter and should be enough for most use cases.
@@ -420,7 +421,7 @@ Notes:
 
 - Click `Show files`  then click the three dots and `Show hidden files` to see Nix and Repl.it configuration files
 
-- In the LiaScript document: `window.CodeRunner.init("wss://testing-coderunner.andreaschwertne.repl.co/")`
+- In the LiaScript document, change the hostname: `window.CodeRunner.init("wss://testing-coderunner.andreaschwertne.repl.co/")`
 
 - Only C and Python included in this proof of concept, but we could add more packages (compilers, libraries) in the `replit.nix` (although this can slow the repl to start).
 
