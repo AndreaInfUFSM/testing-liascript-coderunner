@@ -132,25 +132,25 @@ var order = @1
 var files = []
 
 if (order[0])
-  files.push([order[0], `@input(0)`])
+  files.push([order[0], `@'input(0)`])
 if (order[1])
-  files.push([order[1], `@input(1)`])
+  files.push([order[1], `@'input(1)`])
 if (order[2])
-  files.push([order[2], `@input(2)`])
+  files.push([order[2], `@'input(2)`])
 if (order[3])
-  files.push([order[3], `@input(3)`])
+  files.push([order[3], `@'input(3)`])
 if (order[4])
-  files.push([order[4], `@input(4)`])
+  files.push([order[4], `@'input(4)`])
 if (order[5])
-  files.push([order[5], `@input(5)`])
+  files.push([order[5], `@'input(5)`])
 if (order[6])
-  files.push([order[6], `@input(6)`])
+  files.push([order[6], `@'input(6)`])
 if (order[7])
-  files.push([order[7], `@input(7)`])
+  files.push([order[7], `@'input(7)`])
 if (order[8])
-  files.push([order[8], `@input(8)`])
+  files.push([order[8], `@'input(8)`])
 if (order[9])
-  files.push([order[9], `@input(9)`])
+  files.push([order[9], `@'input(9)`])
 
 
 send.handle("input", (e) => {
@@ -340,7 +340,7 @@ main = do
 
 
 
-### Problem with backticks
+### Problem with backticks (solved)
 
 Haskell infix operator uses backticks around a function: https://wiki.haskell.org/Infix_operator
 
@@ -370,14 +370,25 @@ main = do
 @LIA.haskell()
 
 
-But this doesn't:
+
+
+
+But this didn't work with a CodeRunner script using `@input(` :
 
 ``` haskell
 main = do
   putStrLn $ show $ 9 `mod` 2
 ```
-@LIA.haskell()
 
+
+
+**Update:** This is now solved with a new macro `@'input(` replacing `@input(` in the CodeRunner script located in the header of this document.
+
+``` haskell
+main = do
+  putStrLn $ show $ 9 `mod` 2
+```
+@LIA.eval(`["main.hs"]`, `ghc main.hs -o main`, `./main`)
 
 ### Embedded Repl.it
 
